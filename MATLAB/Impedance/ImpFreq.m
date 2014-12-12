@@ -14,8 +14,8 @@ load(fullfile(pathName, fileName));
 %% Average frequencies
 
 % List of frequencies [Hz]
-freqListStr = {'35', '70', '140', '280', '1120', '2240'};
-freqList = [35, 70, 140, 280, 1120, 2240];
+freqListStr = {'35', '70', '140', '280', '560','1120', '2240'};
+freqList = [35, 70, 140, 280, 560, 1120, 2240];
 
 
 for i = 1:length(freqListStr);
@@ -32,12 +32,12 @@ dataError = dataError.*1000;
 
 % errorbar(dataMean(1,:), dataError(1,:))
 errorbar(dataMean', dataError')
-xlim([0.5,6.5])
+xlim([0.5,7.5])
 ylim([0, 600]);
 
-title('Monkey Electrode Impedance. 2014/12/11')
+title('Monkey Electrode Impedance. 2014/12/12')
 xlabel('Frequency, Hz')
 ylabel('Impedance, k\Omega')
 
-set(gca, 'XTick', [1:6]);
+set(gca, 'XTick', [1:7]);
 set(gca, 'XTickLabel', freqListStr);
